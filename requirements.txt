@@ -1,0 +1,7 @@
+flask
+instagrapi
+yt-dlp
+opencv-python
+pillow
+werkzeug
+gunicorn

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reel Automation</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>🎬 Reel Automation</h1>
+      <p class="subtitle">Paste. Auto-post. Done.</p>
+    </header>
+
+    <!-- Stats -->
+    <div class="stats">
+      <div class="stat-card">
+        <span class="stat-number" id="totalCount">0</span>
+        <span class="stat-label">Total</span>
+      </div>
+      <div class="stat-card posted">
+        <span class="stat-number" id="postedCount">0</span>
+        <span class="stat-label">Posted</span>
+      </div>
+      <div class="stat-card pending">
+        <span class="stat-number" id="pendingCount">0</span>
+        <span class="stat-label">Pending</span>
+      </div>
+      <div class="stat-card failed">
+        <span class="stat-number" id="failedCount">0</span>
+        <span class="stat-label">Failed</span>
+      </div>
+    </div>
+
+    <!-- Add URL -->
+    <section class="card">
+      <h2>Add Reel</h2>
+      <div class="input-group">
+        <input type="text" id="reelUrl" placeholder="Paste Instagram reel URL..." autocomplete="off">
+        <button id="addBtn">Add to Queue</button>
+      </div>
+      <p class="status" id="addStatus"></p>
+    </section>
+
+    <!-- Description Preview (optional) -->
+    <section class="card">
+      <h2>Description (Optional)</h2>
+      <p class="hint">Leave blank to use random. Supports Japanese, emojis, line breaks.</p>
+      <textarea id="customDescription" placeholder="Paste custom description here (supports multi-line with Shift+Enter)" rows="4"></textarea>
+      <small id="charCount">0 characters</small>
+    </section>
+
+    <!-- Queue -->
+    <section class="card">
+      <h2>Queue</h2>
+      <div id="queueList" class="queue-list">
+        <!-- Populated by JS -->
+      </div>
+      <p class="hint" id="emptyMsg">No reels yet. Paste one above!</p>
+    </section>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
